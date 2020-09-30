@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">SecPass</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="log_in">Log In</string>
+    <string name="Signup">Signup</string>
+    <string name="Done">Done</string>
+    <string name="Submit">Submit</string>
+    <string name="terms_and_conditions_privacy_policy">Terms and Conditions | Privacy Policy</string>
+    <string name="enter_your_master_password_or_use_your_fingerprint">Enter Your Master Password or Use Your Fingerprint</string>
+    <string name="unlock_secpass">Unlock SecPass</string>
+    <string name="welcome_back">Welcome back,</string>
+    <string name="SecPass">SecPass</string>
+    <string name="Reset_Password">Reset password?</string>
+    <string name="Forgot_Password">Forgot password?</string>
+    <string name="login_to_continue">LogIn to continue</string>
+    <string name="Already_have_an_account">Already have an account?</string>
+    <string name="Sign_in">Sign in</string>
+    <string name="Create_an_account">Create an account</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="master_password">Master Password</string>
+    <string name="Reenter_Master_Password">Re-enter Master Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="Type_your_email">Type your Email</string>
+    <string name="search">Search</string>
+    <string name="write_here_title">write here title</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="write_here_mobile_number">write here mobile number</string>
+    <string name="country">Country</string>
+    <string name="choose_your_country">choose your country</string>
+    <string name="category">Category</string>
+    <string name="choose_category">choose category</string>
+    <string name="notes">Notes</string>
+    <string name="write_here_note">write here note</string>
+    <string name="save">Save</string>
+    <string name="about_us">About Us</string>
+    <string name="help_center">Help Center</string>
+    <string name="sync">Sync</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="change_my_password">Change My Password</string>
+    <string name="general">General</string>
+    <string name="logout">Logout</string>
+    <string-array name="categories">
+        <item></item>
+        <item>Ids</item>
+        <item>Passwords</item>
+        <item>Credit/Debit Cards</item>
+        <item>Personal Info</item>
+    </string-array>
+    <string name="hint">write here note</string>
+    <string name="wifi">WiFi</string>
+    <string name="title">Title</string>
+    <string name="email_username">Email/Username</string>
+    <string name="write_here_email_or_username">write here email or username</string>
+    <string name="password">Password</string>
+    <string name="write_here_passwords">write here passwords</string>
+    <string name="ecommerce_sites">Ecommerce Sites</string>
+    <string name="device_name">Device Name</string>
+    <string name="write_here_device_name">write here device name</string>
+    <string name="full_name">Full Name</string>
+    <string name="write_here_fullname">write here fullname</string>
+    <string name="pan_number">PAN Number</string>
+    <string name="write_here_pan_number">write here pan number</string>
+    <string name="pancard">Pancard</string>
+    <string name="electioncard_number">Electioncard Number</string>
+    <string name="write_here_electioncard_number">write here electioncard Number</string>
+    <string name="driving_license">Driving License</string>
+    <string name="number">Number</string>
+    <string name="write_here_number">write here number</string>
+    <string name="mm_dd_yy">mm-dd-yy</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="issue_date">Issue Date</string>
+    <string name="gender">Gender</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="select">select</string>
+    <string name="address">Address</string>
+    <string name="write_here_address">write here address</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="_3640xx">3640xx</string>
+    <string name="recipient">Recipient</string>
+    <string name="xxx_xxx">xxx-xxx</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="passport">Passport</string>
+    <string name="place_of_issue">Place of issue</string>
+    <string name="name">Name</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="write_here_nickname">write here nickname</string>
+    <string name="social_media_sites">Social Media Sites</string>
+    <string name="election_card">Election Card</string>
+    <string-array name="State">
+        <item>Select</item>
+        <item>Gujrat</item>
+        <item>Rajasthan</item>
+        <item>Mumbai</item>
+        <item>Delhi</item>
+        <item>Kolkata</item>
+        <item>Punjab</item>
+    </string-array>
+
+    <string-array name="city">
+        <item>Select</item>
+        <item>Bhavnagar</item>
+        <item>Rajkot</item>
+        <item>Ahmedabad</item>
+        <item>Surat</item>
+        <item>Amreli</item>
+        <item>Junagadh</item>
+    </string-array>
+    <string-array name="country">
+        <item>Select Your Country</item>
+        <item>Bhavnagar</item>
+        <item>Rajkot</item>
+        <item>Ahmedabad</item>
+        <item>Surat</item>
+        <item>Amreli</item>
+        <item>Junagadh</item>
+    </string-array>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4E3975</color>
+    <color name="colorPrimaryDark">#4E3975</color>
+    <color name="colorAccent">#FECBB2</color>
+
+    <color name="textcolor">#313033</color>
+    <color name="colorBlue">#4E3975</color>
+    <color name="colorCream">#FECBB2</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorBorder">#B7B7B766</color>
+    <color name="colorTitleText">#3C2C5C</color>
+    <color name="colorHelperText">#B7B7B7</color>
+    <color name="colorButton">#FECBB2</color>
+    <color name="button">#FECBB2</color>
+    <color name="textbackground">#FCFAFF</color>
+    <color name="border">#B7B7B766</color>
+</resources>
