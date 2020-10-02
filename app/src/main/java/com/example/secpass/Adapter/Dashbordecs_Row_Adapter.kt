@@ -2,8 +2,6 @@ package com.example.secpass.Adapter
 
 import android.app.Activity
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +10,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.secpass.R
-import com.example.secpass.ui.Dashbord_Row_Adapterinternal
 import java.util.ArrayList
 
  class Dashbordecs_Row_Adapter  constructor(private val activity: Activity, private val context: Context, private val SecPass_idecs: ArrayList<*>, private val SecPass_titleecs: ArrayList<*>, private val SecPass_emailusernameecs: ArrayList<*>,
@@ -61,7 +58,7 @@ import java.util.ArrayList
 
         init {
             // book_id_txt = itemView.findViewById(R.id.book_id_txt)
-            Emailecs = itemView.findViewById(R.id.Emailecs)
+            Emailecs = itemView.findViewById(R.id.mail)
             //   book_author_txt = itemView.findViewById(R.id.book_author_txt)
             //       book_pages_txt = itemView.findViewById(R.id.book_pages_txt)
             //       book_gender_txt = itemView.findViewById(R.id.book_gender_txt)

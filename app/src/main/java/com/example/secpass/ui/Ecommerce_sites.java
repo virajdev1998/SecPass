@@ -42,9 +42,8 @@ ImageView imgClosees;
             @Override
             public void onClick(View v) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(Ecommerce_sites.this);
-                myDB.addecommercesites(etTitlees.getText().toString().trim(),
+                myDB.addsocialmediasites(etTitlees.getText().toString().trim(),
                         etEmailes.getText().toString().trim(),
-
                         etPasswordes.getText().toString().trim(),
                         "",
                         etNotees.getText().toString().trim()

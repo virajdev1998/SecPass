@@ -1,10 +1,11 @@
 package com.example.secpass.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.secpass.R
+import com.example.secpass.helper.MyDatabaseHelper
 import kotlinx.android.synthetic.main.activity_add_election_card.*
 
 class AddElectionCardActivity : AppCompatActivity(), View.OnClickListener {
