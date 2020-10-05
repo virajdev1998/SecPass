@@ -7,7 +7,9 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.secpass.Adapter.*
+import com.example.secpass.Adapter.IDs_Adapter
+import com.example.secpass.Adapter.Personal_info_Adapter
+import com.example.secpass.Adapter.Social_Media_Adapter
 import com.example.secpass.R
 import com.example.secpass.helper.MyDatabaseHelper
 import com.example.secpass.modal.IDs
@@ -15,7 +17,7 @@ import com.example.secpass.modal.Personal_Info
 import com.example.secpass.modal.Social_Media
 import com.github.clans.fab.FloatingActionMenu
 import kotlinx.android.synthetic.main.activity_dash_board.*
-import java.util.ArrayList
+import java.util.*
 
 class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
     FloatingActionMenu.OnMenuToggleListener {
@@ -170,7 +172,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
             }
 
             R.id.passport -> {
-                startActivity(Intent(this, Add_Passport::class.java))
+                startActivity(Intent(this, ::class.java))
             }
 
             R.id.driving_license -> {

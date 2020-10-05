@@ -85,15 +85,14 @@
                         android:textColor="@color/colorTitleText"
                         android:textSize="16sp"/>
 
-                    <EditText
+                    <TextView
                         android:id="@+id/etTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/write_here_title"
                         android:fontFamily="@font/gilroysemi"
-                        android:textSize="14sp"
+                        android:text="E-Commerce Sites"
                         android:padding="16dp"
-                        android:inputType="text"
+                        android:textSize="18sp"
                         android:textColor="@color/colorTitleText"
                         android:layout_marginTop="12dp"
                         android:layout_marginHorizontal="16dp"

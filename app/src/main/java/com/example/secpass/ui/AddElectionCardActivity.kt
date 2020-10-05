@@ -32,7 +32,14 @@ class AddElectionCardActivity : AppCompatActivity(), View.OnClickListener {
 
             }
             R.id.btnSave -> {
-                startActivity(Intent(this,DashBoardActivity::class.java))
+                var db = MyDatabaseHelper(this)
+                db.addidproof(
+                    etTitle.text.toString(), etEmail.text.toString(),
+                    etElectionCard.text.toString(), "",
+                    "", "", "", "",
+                    etNote.text.toString(), etTitle.text.toString(), ""
+                )
+                startActivity(Intent(this, DashBoardActivity::class.java))
             }
         }
     }

@@ -1,295 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:fillViewport="true"
-    tools:context=".ui.AddPhoneNumberActivity">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.Add_PanCard">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark"
-        android:orientation="vertical"
-        android:weightSum="10">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2">
-
-            <ImageView
-                android:id="@+id/imgphonenumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="25dp"
-                android:background="@color/colorPrimaryDark"
-                android:src="@drawable/ic_close" />
-
-            <ImageButton
-                android:id="@+id/btnProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="17dp"
-                android:background="@color/colorPrimaryDark"
-                android:src="@drawable/nopath" />
-
-            <TextView
-                android:id="@+id/lblname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnProfile"
-                android:layout_marginLeft="25dp"
-                android:layout_marginBottom="5dp"
-                android:text="Phone Number"
-                android:textColor="@color/colorWhite"
-                android:textSize="20sp" />
-
-
-        </RelativeLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
 
         <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgClosepc"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="32dp"
+                android:src="@drawable/ic_close" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <ImageView
+                android:id="@+id/imgAccount"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/nopath" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtwifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/gilroysemi"
+        android:text="Phone Number"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/layout_bg"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="8"
-            android:background="@drawable/layout_bg"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <androidx.core.widget.NestedScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/lblTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="3dp"
                     android:fontFamily="@font/gilroy"
-                    android:text="Title"
+                    android:text="@string/title"
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtTitle"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <TextView
+                    android:id="@+id/etTitlepn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="25dp"
-                    android:hint="@string/write_here_title"
-                    android:textColorHint="@color/colorHelperText"
-                    app:boxBackgroundColor="#FCFAFF"
-                    app:boxCornerRadiusBottomEnd="14dp"
-                    app:boxCornerRadiusBottomStart="14dp"
-                    app:boxCornerRadiusTopEnd="14dp"
-                    app:boxCornerRadiusTopStart="14dp"
-                    app:boxStrokeColor="@color/colorBorder"
-                    app:boxStrokeWidth="1dp"
-                    app:hintTextColor="@color/colorHelperText">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_texttitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/gilroy_medium"
-                        android:inputType="text"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/edit_text_border"
+                    android:fontFamily="@font/gilroysemi"
+                    android:textColor="@color/colorTitleText"
+                    android:padding="16dp"
+                    android:text="Phone Number"
+                    android:textColorHint="@color/border"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/lblMobile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="3dp"
                     android:fontFamily="@font/gilroy"
-                    android:text="@string/mobile_number"
+                    android:text="@string/full_name"
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtMobile"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <EditText
+                    android:id="@+id/etNamepc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="25dp"
-                    android:hint="@string/write_here_mobile_number"
-                    android:textColorHint="@color/colorHelperText"
-                    app:boxBackgroundColor="#FCFAFF"
-                    app:boxCornerRadiusBottomEnd="14dp"
-                    app:boxCornerRadiusBottomStart="14dp"
-                    app:boxCornerRadiusTopEnd="14dp"
-                    app:boxCornerRadiusTopStart="14dp"
-                    app:boxStrokeColor="@color/colorBorder"
-                    app:boxStrokeWidth="1dp"
-                    app:hintTextColor="@color/colorHelperText">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_mobileno"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/gilroy_medium"
-                        android:inputType="number"
-                        android:maxLength="10"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/edit_text_border"
+                    android:fontFamily="@font/gilroysemi"
+                    android:hint="@string/write_here_fullname"
+                    android:inputType="textEmailAddress"
+                    android:padding="16dp"
+                    android:textColor="@color/colorTitleText"
+                    android:textColorHint="@color/border"
+                    android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/lblCountry"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="3dp"
                     android:fontFamily="@font/gilroy"
-                    android:text="@string/country"
+                    android:text="@string/pan_number"
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                <EditText
+                    android:id="@+id/etPanNumberpc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="25dp"
-                    android:hint="@string/choose_your_country"
-                    android:textColorHint="@color/colorHelperText"
-                    app:boxBackgroundColor="#FCFAFF"
-                    app:boxCornerRadiusBottomEnd="14dp"
-                    app:boxCornerRadiusBottomStart="14dp"
-                    app:boxCornerRadiusTopEnd="14dp"
-                    app:boxCornerRadiusTopStart="14dp"
-                    app:boxStrokeColor="@color/colorBorder"
-                    app:boxStrokeWidth="1dp"
-                    app:endIconMode="dropdown_menu"
-                    app:endIconTint="@color/colorHelperText"
-                    app:hintTextColor="@color/colorHelperText">
-
-                    <AutoCompleteTextView
-                        android:id="@+id/txtCategory"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/gilroy_medium"
-                        android:inputType="none"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <TextView
-                    android:id="@+id/lblCategory"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="25dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="3dp"
-                    android:fontFamily="@font/gilroy"
-                    android:text="@string/category"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/edit_text_border"
+                    android:fontFamily="@font/gilroysemi"
+                    android:hint="@string/write_here_pan_number"
+                    android:inputType="number"
+                    android:padding="16dp"
                     android:textColor="@color/colorTitleText"
-                    android:textSize="16sp" />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="25dp"
-                    android:hint="@string/choose_category"
-                    android:textColorHint="@color/colorHelperText"
-                    app:boxBackgroundColor="#FCFAFF"
-                    app:boxCornerRadiusBottomEnd="14dp"
-                    app:boxCornerRadiusBottomStart="14dp"
-                    app:boxCornerRadiusTopEnd="14dp"
-                    app:boxCornerRadiusTopStart="14dp"
-                    app:boxStrokeColor="@color/colorBorder"
-                    app:boxStrokeWidth="1dp"
-                    app:endIconMode="dropdown_menu"
-                    app:endIconTint="@color/colorHelperText"
-                    app:hintTextColor="@color/colorHelperText">
-
-                    <AutoCompleteTextView
-                        android:id="@+id/txtCountry"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/gilroy_medium"
-                        android:inputType="none"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:textColorHint="@color/border"
+                    android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/lblNotes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="3dp"
                     android:fontFamily="@font/gilroy"
                     android:text="@string/notes"
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="25dp"
-                    android:hint="@string/write_here_note"
-                    android:textColorHint="@color/colorHelperText"
-                    app:boxBackgroundColor="#FCFAFF"
-                    app:boxCornerRadiusBottomEnd="14dp"
-                    app:boxCornerRadiusBottomStart="14dp"
-                    app:boxCornerRadiusTopEnd="14dp"
-                    app:boxCornerRadiusTopStart="14dp"
-                    app:boxStrokeColor="@color/colorBorder"
-                    app:boxStrokeWidth="1dp"
-                    app:hintTextColor="@color/colorHelperText">
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_text_border"
+                    android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/edt_Notes"
+                    <EditText
+                        android:id="@+id/etNotepc"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:fontFamily="@font/gilroy_medium"
-                        android:inputType="textMultiLine"
-                        android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnSavephonenumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:layout_marginHorizontal="24dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="24dp"
-                    android:backgroundTint="@color/colorButton"
-                    android:shadowColor="@color/colorBlack"
-                    android:text="@string/save"
-                    android:textColor="@color/colorBlack"
-                    app:cornerRadius="14dp" />
+                        android:layout_marginVertical="10dp"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="@string/write_here_note"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/colorTitleText"
+                        android:textColorHint="@color/border"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
 
                 </LinearLayout>
 
-            </androidx.core.widget.NestedScrollView>
+                <Button
+                    android:id="@+id/btnSavepc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:padding="16dp"
+                    android:backgroundTint="@color/colorButton"
+                    android:shadowColor="@color/colorBlack"
+                    android:text="@string/save"
+                    android:textColor="@color/colorBlack" />
 
-        </LinearLayout>
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 
