@@ -85,15 +85,14 @@
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/etTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/write_here_title"
                     android:fontFamily="@font/gilroysemi"
-                    android:textSize="14sp"
+                    android:text="Election Card"
                     android:padding="16dp"
-                    android:inputType="text"
+                    android:textSize="18sp"
                     android:textColor="@color/colorTitleText"
                     android:layout_marginTop="12dp"
                     android:layout_marginHorizontal="16dp"
@@ -152,28 +151,6 @@
                     android:background="@drawable/edit_text_border"
                     android:textColorHint="@color/border" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="25dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="3dp"
-                    android:fontFamily="@font/gilroy"
-                    android:text="@string/category"
-                    android:textColor="@color/colorTitleText"
-                    android:textSize="16sp"/>
-
-                <Spinner
-                    android:id="@+id/spnCategory"
-                    android:textSize="14sp"
-                    android:entries="@array/categories"
-                    android:padding="15dp"
-                    android:background="@drawable/spinner_background"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/border"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -200,12 +177,13 @@
                         android:layout_height="80dp"
                         android:hint="@string/write_here_note"
                         android:textColorHint="@color/border"
-                        android:layout_marginStart="24dp"
-                        android:layout_marginTop="12dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="7dp"
                         android:textSize="18sp"
                         android:background="@null"
+                        android:textColor="@color/colorTitleText"
                         android:gravity="top"
-                        android:textStyle="normal"/>
+                        android:textStyle="normal" />
 
                 </LinearLayout>
 

@@ -1,10 +1,11 @@
 package com.example.secpass.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.secpass.R
+import com.example.secpass.helper.MyDatabaseHelper
 import kotlinx.android.synthetic.main.activity_add_election_card.*
 
 class AddElectionCardActivity : AppCompatActivity(), View.OnClickListener {
@@ -31,7 +32,14 @@ class AddElectionCardActivity : AppCompatActivity(), View.OnClickListener {
 
             }
             R.id.btnSave -> {
-                startActivity(Intent(this,DashBoardActivity::class.java))
+                var db = MyDatabaseHelper(this)
+                db.addidproof(
+                    etTitle.text.toString(), etEmail.text.toString(),
+                    etElectionCard.text.toString(), "",
+                    "", "", "", "",
+                    etNote.text.toString(), etTitle.text.toString(), ""
+                )
+                startActivity(Intent(this, DashBoardActivity::class.java))
             }
         }
     }

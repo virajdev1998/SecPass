@@ -1,22 +1,22 @@
 package com.example.secpass.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EdgeEffect;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.secpass.R;
 import com.example.secpass.helper.MyDatabaseHelper;
 
 public class DrivingLIcence extends AppCompatActivity {
-EditText etTitle,etfullname,etnumber,etIssueDate,etExpirationDate,etGenderdl,etDateofBirth,etCountry,etNotedl;
-Button btnSavedl;
-ImageView imgClosedl;
+    EditText etTitle, etfullname, etnumber, etIssueDate, etExpirationDate, etGenderdl, etDateofBirth, etCountry, etNotedl;
+    Button btnSavedl;
+    ImageView imgClosedl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +36,7 @@ ImageView imgClosedl;
         imgClosedl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DrivingLIcence.this,DashBoardActivity.class);
+                Intent i = new Intent(DrivingLIcence.this, DashBoardActivity.class);
                 startActivity(i);
             }
         });
@@ -45,15 +45,15 @@ ImageView imgClosedl;
             @Override
             public void onClick(View v) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(DrivingLIcence.this);
-                myDB.adddrivinglicense(etTitle.getText().toString().trim(),
+                myDB.addidproof(etTitle.getText().toString().trim(),
                         etfullname.getText().toString().trim(),
-                        Integer.valueOf(etnumber.getText().toString().trim()),
-                        Integer.valueOf(etIssueDate.getText().toString().trim()),
-                        Integer.valueOf(etExpirationDate.getText().toString().trim()),
+                        etnumber.getText().toString().trim(),
+                        etIssueDate.getText().toString().trim(),
+                        etExpirationDate.getText().toString().trim(),
                         etGenderdl.getText().toString().trim(),
-                        Integer.valueOf(etDateofBirth.getText().toString().trim()),
+                        etDateofBirth.getText().toString().trim(),
                         etCountry.getText().toString().trim(),
-                        etNotedl.getText().toString().trim()
+                        etNotedl.getText().toString().trim(), "", ""
                 );
             }
         });

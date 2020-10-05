@@ -72,6 +72,8 @@ class Dashbordwifi_Row_Adapter constructor(private val activity: Activity, priva
         }
     }
 
+    override fun getItemViewType(position: Int): Int {
 
-
+        return super.getItemViewType(position)
+    }
 }

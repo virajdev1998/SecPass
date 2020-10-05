@@ -9,21 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Adapter.Dashbordwifi_Row_Adapter"></activity>
-        <activity android:name=".Adapter.Dashbordecs_Row_Adapter" />
+
         <activity android:name=".ui.Copy_to_clipbord" />
-        <activity android:name=".ui.Dashbord_Row_Adapter" />
-        <activity android:name=".ui.Forgot_Password" />
-        <activity android:name=".ui.Reset_Password" />
-        <activity android:name=".ui.Signup" />
-        <activity android:name=".ui.Ecommerce_sites" />
-        <activity android:name=".ui.social_media_sites" />
-        <activity android:name=".ui.Add_Electioncard" />
-        <activity android:name=".ui.Add_Passport" />
-        <activity android:name=".ui.Add_PanCard" />
-        <activity android:name=".ui.DrivingLIcence" />
-        <activity android:name=".ui.DrivingLicene" />
-        <activity android:name=".ui.Add_Name" />
         <activity android:name=".ui.AddNameActivity" />
         <activity android:name=".ui.PassportActivity" />
         <activity android:name=".ui.DrivingLicenseActivity" />
@@ -32,9 +19,6 @@
         <activity android:name=".ui.AddPanCardActivity" />
         <activity android:name=".ui.AddSocialMediaSites" />
         <activity android:name=".ui.AddEcommerceSitesActivity" />
-        <activity android:name=".ui.AddWifiActivity" />
-        <activity android:name=".ui.SettingActivity" />
-        <activity android:name=".ui.AddPhoneNumberActivity" />
         <activity
             android:name=".ui.DashBoardActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />

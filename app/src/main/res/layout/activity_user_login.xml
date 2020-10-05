@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             android:text="@string/log_in"
             android:background="@drawable/textview_border"
-            android:padding="12dp"
+            android:padding="16dp"
             android:gravity="center"
             android:textColor="#3C2C5C"
             android:layout_marginTop="40dp"

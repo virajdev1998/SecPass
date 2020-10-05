@@ -1,7 +1,5 @@
 package com.example.secpass.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,14 +8,16 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.secpass.R;
 import com.example.secpass.helper.MyDatabaseHelper;
 
 public class social_media_sites extends AppCompatActivity {
-EditText etTitlsms,etEmailsms,etPasswordsms,etNotesms;
-Spinner spnCategorysms;
-Button btnSavesms;
-ImageView imgClosesms;
+    EditText etTitlsms, etEmailsms, etPasswordsms, etNotesms;
+    Spinner spnCategorysms;
+    Button btnSavesms;
+    ImageView imgClosesms;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ ImageView imgClosesms;
         imgClosesms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(social_media_sites.this,DashBoardActivity.class);
+                Intent i = new Intent(social_media_sites.this, DashBoardActivity.class);
                 startActivity(i);
             }
         });

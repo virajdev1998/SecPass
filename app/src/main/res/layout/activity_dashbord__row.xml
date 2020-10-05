@@ -50,7 +50,7 @@
 
             <TextView
                 android:textColor="@color/colorBlue"
-                android:id="@+id/Emailsms"
+                android:id="@+id/Email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
