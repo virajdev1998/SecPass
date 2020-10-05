@@ -172,7 +172,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
             }
 
             R.id.passport -> {
-                startActivity(Intent(this, ::class.java))
+                startActivity(Intent(this, Add_PanCard::class.java))
             }
 
             R.id.driving_license -> {
@@ -199,7 +199,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
                 startActivity(Intent(this, social_media_sites::class.java))
             }
             R.id.name -> {
-                startActivity(Intent(this, Add_Name::class.java))
+                startActivity(Intent(this, AddNameActivity::class.java))
             }
         }
     }
