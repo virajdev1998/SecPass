@@ -20,7 +20,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/imgClosepc"
+                android:id="@+id/imgClosepn"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="32dp"
@@ -105,19 +105,19 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="3dp"
                     android:fontFamily="@font/gilroy"
-                    android:text="@string/full_name"
+                    android:text="Mobile Number"
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/etNamepc"
+                    android:id="@+id/etmobilenumberpn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/edit_text_border"
                     android:fontFamily="@font/gilroysemi"
-                    android:hint="@string/write_here_fullname"
+                    android:hint="Write Phone Number Here"
                     android:inputType="textEmailAddress"
                     android:padding="16dp"
                     android:textColor="@color/colorTitleText"
@@ -131,19 +131,19 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="3dp"
                     android:fontFamily="@font/gilroy"
-                    android:text="@string/pan_number"
+                    android:text="Country"
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/etPanNumberpc"
+                    android:id="@+id/etcountrypn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/edit_text_border"
                     android:fontFamily="@font/gilroysemi"
-                    android:hint="@string/write_here_pan_number"
+                    android:hint="Write Country Here"
                     android:inputType="number"
                     android:padding="16dp"
                     android:textColor="@color/colorTitleText"
@@ -170,7 +170,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/etNotepc"
+                        android:id="@+id/etnotepn"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_marginVertical="10dp"
@@ -186,7 +186,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btnSavepc"
+                    android:id="@+id/btnSavepn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"

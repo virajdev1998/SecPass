@@ -3,67 +3,65 @@ package com.example.secpass.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.secpass.R;
 import com.example.secpass.helper.MyDatabaseHelper;
-import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class AddPhoneNumberActivity extends AppCompatActivity implements View.OnClickListener {
 
     AutoCompleteTextView txtCategory;
-    AutoCompleteTextView txtCountry;
     ImageView imgphonenumber;
     Button btnSavephonenumber;
-    TextInputEditText edt_texttitle, edt_mobileno, edt_Notes;
+    EditText edt_mobileno, edt_Notes, txtCountry;
+    TextView edt_texttitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_phone_number);
 
-        txtCategory = findViewById(R.id.txtCategory);
-        edt_texttitle = findViewById(R.id.edt_texttitle);
-        edt_mobileno = findViewById(R.id.edt_mobileno);
-        edt_Notes = findViewById(R.id.edt_Notes);
-        txtCountry = findViewById(R.id.txtCountry);
-        imgphonenumber = findViewById(R.id.imgphonenumber);
-        btnSavephonenumber = findViewById(R.id.btnSavephonenumber);
+        edt_texttitle = findViewById(R.id.etTitlepn);
+        edt_mobileno = findViewById(R.id.etmobilenumberpn);
+        edt_Notes = findViewById(R.id.etnotepn);
+        txtCountry = findViewById(R.id.etcountrypn);
+        imgphonenumber = findViewById(R.id.imgClosepn);
+        btnSavephonenumber = findViewById(R.id.btnSavepn);
 
         //  btnClose.setOnClickListener(this);
-        ArrayList<String> categories = new ArrayList<>();
-        categories.add("abc");
-        categories.add("xyz");
-        categories.add("pqr");
+//        ArrayList<String> categories = new ArrayList<>();
+//        categories.add("abc");
+//        categories.add("xyz");
+//        categories.add("pqr");
+//
+//        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(
+//                this,
+//                android.R.layout.simple_list_item_1,
+//                categories
+//        );
 
-        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                categories
-        );
-
-        txtCategory.setAdapter(categoriesAdapter);
-
-        ArrayList<String> countries = new ArrayList<>();
-        countries.add("India");
-        countries.add("Canada");
-        countries.add("US");
-
-        ArrayAdapter<String> countriesAdapter = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                countries
-        );
-
-        txtCountry.setAdapter(countriesAdapter);
+//        txtCategory.setAdapter(categoriesAdapter);
+//
+//        ArrayList<String> countries = new ArrayList<>();
+//        countries.add("India");
+//        countries.add("Canada");
+//        countries.add("US");
+//
+//        ArrayAdapter<String> countriesAdapter = new ArrayAdapter<>(
+//                this,
+//                android.R.layout.simple_list_item_1,
+//                countries
+//        );
+//
+//        txtCountry.setAdapter(countriesAdapter);
         imgphonenumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
