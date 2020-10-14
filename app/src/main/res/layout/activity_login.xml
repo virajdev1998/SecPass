@@ -1,55 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlue"
-    tools:context=".ui.LoginActivity">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.SettingActivity">
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnLogout"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/login_onboard"
+                android:contentDescription="TODO">
+
+            </ImageView>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+<RelativeLayout
+
+    android:layout_margin="25dp"
+    android:gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_above="@+id/tvLogin"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/tvCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textview_border"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/create_an_account"
+        android:textColor="#3C2C5C"
+        android:textSize="14sp" />
+
+    <TextView
+
+        android:id="@+id/tvLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:orientation="vertical">
-        
-        <TextView
-            android:id="@+id/tvCreateAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/create_an_account"
-            android:background="@drawable/textview_border"
-            android:padding="16dp"
-            android:gravity="center"
-            android:textColor="#3C2C5C"
-            android:layout_marginHorizontal="32dp"
-            android:textSize="14sp"/>
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/textview_login_border"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/sign_in"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/tvLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/log_in"
-            android:background="@drawable/textview_login_border"
-            android:layout_marginTop="32dp"
-            android:padding="16dp"
-            android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:layout_marginHorizontal="32dp"
-            android:textSize="14sp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/terms_and_conditions_privacy_policy"
-            android:layout_marginTop="32dp"
-            android:padding="16dp"
-            android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginBottom="8dp"
-            android:textSize="14sp"/>
+</RelativeLayout>
 
-    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
 
-</LinearLayout>
+        android:text="@string/terms_and_conditions_privacy_policy"
+        android:textColor="#b7b7b7"
+        android:textSize="14sp" />
+
+</FrameLayout>
+
+
+
+
+

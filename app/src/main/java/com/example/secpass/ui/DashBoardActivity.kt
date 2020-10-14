@@ -3,8 +3,10 @@ package com.example.secpass.ui
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.secpass.Adapter.IDs_Adapter
@@ -16,16 +18,17 @@ import com.example.secpass.modal.IDs
 import com.example.secpass.modal.Personal_Info
 import com.example.secpass.modal.Social_Media
 import com.github.clans.fab.FloatingActionMenu
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_dash_board.*
 import java.util.*
 
 class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
-    FloatingActionMenu.OnMenuToggleListener {
+    FloatingActionMenu.OnMenuToggleListener, NavigationView.OnNavigationItemSelectedListener {
 
     private var isopened = false
     var recyclerView: RecyclerView? = null
-    var recyclerViewecs: RecyclerView? = null
-    var recyclerViewwifi: RecyclerView? = null
+    var recyclerViewids: RecyclerView? = null
+    var recyclerViewesms: RecyclerView? = null
 
     private var myDB: MyDatabaseHelper? = null
 
@@ -40,34 +43,49 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dash_board)
-
+        navigationDrawer()
         initView()
         myDB = MyDatabaseHelper(this)
 
         Store_Personal_info()
         Store_IDs()
         Store_Social_Media()
-
+        //perosnal info
         Perosnal_info = Personal_info_Adapter(this, list!!)
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView!!.adapter = Perosnal_info
         recyclerView!!.layoutManager = LinearLayoutManager(this)
         //ids
         ID_Adapter=IDs_Adapter(this,Ids!!)
-        recyclerView!!.adapter = ID_Adapter
-        recyclerView!!.layoutManager = LinearLayoutManager(this)
+        recyclerViewids = findViewById(R.id.recyclerViewids)
+        recyclerViewids!!.adapter = ID_Adapter
+        recyclerViewids!!.layoutManager = LinearLayoutManager(this)
         //social media
 
         Social_media_adapter= Social_Media_Adapter(this,Social_list!!)
-        recyclerView!!.adapter = Social_media_adapter
-        recyclerView!!.layoutManager = LinearLayoutManager(this)
+        recyclerViewesms = findViewById(R.id.recyclerViewesms)
+        recyclerViewesms!!.adapter = Social_media_adapter
+        recyclerViewesms!!.layoutManager = LinearLayoutManager(this)
 
+    }
+    private fun navigationDrawer() {
+        //Naviagtion Drawer
+        navigationview!!.bringToFront()
+        navigationview!!.setNavigationItemSelectedListener(this)
+// navigationView.setCheckedItem(R.id.nav_home);
+        navbutton!!.setOnClickListener { if (drawerLayout!!.isDrawerVisible(GravityCompat.START)) drawerLayout!!.closeDrawer(
+            GravityCompat.START) else drawerLayout!!.openDrawer(GravityCompat.START) }
+    }
+    override fun onBackPressed() {
+        if (drawerLayout!!.isDrawerVisible(GravityCompat.START)) {
+            drawerLayout!!.closeDrawer(GravityCompat.START)
+        }else super.onBackPressed()
     }
 
     private fun initView() {
 
         ids.setOnClickListener(this)
-        cards.setOnClickListener(this)
+     //   cards.setOnClickListener(this)
         password.setOnClickListener(this)
         floatingmenu.setOnClickListener(this)
         personalinfo.setOnClickListener(this)
@@ -79,6 +97,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
         wifi.setOnClickListener(this)
         ecommerce.setOnClickListener(this)
         address.setOnClickListener(this)
+        userprofile.setOnClickListener(this)
         name.setOnClickListener(this)
         phonenumber.setOnClickListener(this)
         socialmedia.setOnClickListener(this)
@@ -94,7 +113,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
                 driving_license.visibility = View.VISIBLE
                 ids.visibility = View.GONE
                 personalinfo.visibility = View.GONE
-                cards.visibility = View.GONE
+       //         cards.visibility = View.GONE
                 password.visibility = View.GONE
                 wifi.visibility = View.GONE
                 ecommerce.visibility = View.GONE
@@ -114,7 +133,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
                 driving_license.visibility = View.GONE
                 ids.visibility = View.GONE
                 personalinfo.visibility = View.GONE
-                cards.visibility = View.GONE
+           //     cards.visibility = View.GONE
                 password.visibility = View.GONE
                 address.visibility = View.GONE
                 name.visibility = View.GONE
@@ -148,7 +167,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
                 phonenumber.visibility = View.VISIBLE
                 ids.visibility = View.GONE
                 personalinfo.visibility = View.GONE
-                cards.visibility = View.GONE
+      //          cards.visibility = View.GONE
                 password.visibility = View.GONE
                 pan_card.visibility = View.GONE
                 election_card.visibility = View.GONE
@@ -159,12 +178,12 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
                 socialmedia.visibility = View.GONE
             }
 
-            R.id.cards -> {
+        /*    R.id.cards -> {
 
-            }
+            }*/
 
             R.id.pan_card -> {
-                startActivity(Intent(this, Add_PanCard::class.java))
+                startActivity(Intent(this, Pan_Card::class.java))
             }
 
             R.id.election_card -> {
@@ -172,7 +191,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
             }
 
             R.id.passport -> {
-                startActivity(Intent(this, Add_PanCard::class.java))
+                startActivity(Intent(this, PassportActivity::class.java))
             }
 
             R.id.driving_license -> {
@@ -201,6 +220,9 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
             R.id.name -> {
                 startActivity(Intent(this, AddNameActivity::class.java))
             }
+            R.id.userprofile->{
+                startActivity(Intent(this,profile_screen::class.java))
+            }
         }
     }
 
@@ -208,7 +230,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
         if (floatingmenu.isOpened) {
             ids.visibility = View.VISIBLE
             personalinfo.visibility = View.VISIBLE
-            cards.visibility = View.VISIBLE
+            //cards.visibility = View.VISIBLE
             password.visibility = View.VISIBLE
 
         } else {
@@ -238,7 +260,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
                         cursor.getString(2), cursor.getString(3),
                         cursor.getString(4), cursor.getString(5),
                         cursor.getString(6), cursor.getString(7),
-                        cursor.getString(8), cursor.getString(9)
+                        cursor.getString(8)
                     )
                 )
             }
@@ -257,7 +279,7 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
                         cursor.getString(4), cursor.getString(5),
                         cursor.getString(6), cursor.getString(7),
                         cursor.getString(8), cursor.getString(9),
-                        cursor.getString(10),cursor.getString(11)
+                        cursor.getString(10)
                     )
                 )
             }
@@ -273,11 +295,27 @@ class DashBoardActivity : AppCompatActivity(), View.OnClickListener,
                     Social_Media(
                         cursor.getInt(0), cursor.getString(1),
                         cursor.getString(2), cursor.getString(3),
-                        cursor.getString(4), cursor.getString(5))
+                        cursor.getString(4))
                 )
             }
             Log.e("test", list.toString())
         }
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.home_menu ->{
+                startActivity(Intent(this,DashBoardActivity::class.java))
+            }
+            R.id.accsetting ->{
+                startActivity(Intent(this,profile_screen::class.java))
+            }
+            R.id.settings ->{
+                startActivity(Intent(this,SettingActivity::class.java))
+            }
+        }
+        drawerLayout.closeDrawer(GravityCompat.START)
+        return true
     }
 }
 

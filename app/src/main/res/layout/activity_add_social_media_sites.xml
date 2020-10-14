@@ -60,7 +60,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="24dp"
         android:background="@drawable/layout_bg">
@@ -71,7 +71,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <TextView
@@ -85,15 +85,16 @@
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/etTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/write_here_title"
                     android:fontFamily="@font/gilroysemi"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:padding="16dp"
                     android:inputType="text"
+                    android:text="@string/social_media_sites"
                     android:textColor="@color/colorTitleText"
                     android:layout_marginTop="12dp"
                     android:layout_marginHorizontal="16dp"
@@ -153,7 +154,7 @@
                     android:background="@drawable/edit_text_border"
                     android:textColorHint="@color/border" />
 
-                <TextView
+           <!--     <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="25dp"
@@ -163,8 +164,8 @@
                     android:text="@string/category"
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp"/>
-
-                <Spinner
+-->
+                <!--<Spinner
                     android:id="@+id/spnCategory"
                     android:textSize="14sp"
                     android:entries="@array/categories"
@@ -175,7 +176,7 @@
                     android:layout_marginHorizontal="16dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
-
+-->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

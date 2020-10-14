@@ -2,15 +2,35 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.secpass">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".AppClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
-        <activity android:name=".ui.Copy_to_clipbord" />
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.Datepicker"></activity>
+        <activity android:name=".ui.Reset_Password" />
+        <activity android:name=".ui.Pan_Card" />
+        <activity
+            android:name=".ui.slider"
+            android:theme="@style/AppThemetwo" />
+        <activity android:name=".ui.profile_screen" />
+        <activity android:name=".ui.OnBoarding" />
+        <activity
+            android:name=".ui.Copy_to_clipbord"
+            android:theme="@style/AppThemetwo" />
+        <activity android:name=".ui.Forgot_Password" />
+        <activity android:name=".ui.Signup" />
+        <activity android:name=".ui.Ecommerce_sites" />
+        <activity android:name=".ui.social_media_sites" />
+        <activity android:name=".ui.Add_PanCard" />
+        <activity android:name=".ui.DrivingLIcence" />
+        <activity android:name=".ui.SettingActivity" />
         <activity android:name=".ui.AddNameActivity" />
         <activity android:name=".ui.PassportActivity" />
         <activity android:name=".ui.DrivingLicenseActivity" />
@@ -19,6 +39,8 @@
         <activity android:name=".ui.AddPanCardActivity" />
         <activity android:name=".ui.AddSocialMediaSites" />
         <activity android:name=".ui.AddEcommerceSitesActivity" />
+        <activity android:name=".ui.AddWifiActivity" />
+        <activity android:name=".ui.AddPhoneNumberActivity" />
         <activity
             android:name=".ui.DashBoardActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />

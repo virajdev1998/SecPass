@@ -21,7 +21,7 @@ class MyDatabaseHelper(private val context: Context?) :
                 COLUMN_TITLE + " TEXT, " +
                 COLUMN_PHONENUMBER + " INTEGER, " +
                 COLUMN_COUNTRY + " TEXT," +
-                COLUMN_CATEGORY + " TEXT," +
+               // COLUMN_CATEGORY + " TEXT," +
                 COLUMN_NOTE + " TEXT)"
         db.execSQL(query)
 
@@ -33,7 +33,7 @@ class MyDatabaseHelper(private val context: Context?) :
                     COLUMN_FULLNAMEIDS + " TEXT, " +
                     COLUMN_NUMBERIDS + " TEXT," +
                     //category Pancard & Election card
-                    COLUMN_CATEGORYIDS + " TEXT," +
+                 //   COLUMN_CATEGORYIDS + " TEXT," +
                     COLUMN_ISSUEDATEIDS + " TEXT," +
                     COLUMN_EXPIRATONDATEIDS + " TEXT," +
                     COLUMN_DATEOFBIRTHIDS + " TEXT," +
@@ -50,7 +50,7 @@ class MyDatabaseHelper(private val context: Context?) :
                     COLUMN_TITLPASSWORD + " TEXT, " +
                     COLUMN_EMAILUSERNAMEPASSWORD + " TEXT, " +
                     COLUMN_PASSWORDPASSWORD + " TEXT," +
-                    COLUMN_CATEGORYPASSWORD + " TEXT," +
+                    //COLUMN_CATEGORYPASSWORD + " TEXT," +
                     COLUMN_NOTESPASSWORD + " TEXT)"
         db.execSQL(query_socialmedia)
 
@@ -70,15 +70,14 @@ class MyDatabaseHelper(private val context: Context?) :
 
     //personal info
     fun addName(
-
+        title: String?,
         fullname: String?,
         nickname: String?,
         dob: String,
         gender: String?,
-        title: String?,
         phonenumber: String,
         country: String?,
-        category: String?,
+      //  category: String?,
         note: String?
     ) {
         val db = this.writableDatabase
@@ -91,7 +90,7 @@ class MyDatabaseHelper(private val context: Context?) :
         cv.put(COLUMN_TITLE, title)
         cv.put(COLUMN_PHONENUMBER, phonenumber)
         cv.put(COLUMN_COUNTRY, country)
-        cv.put(COLUMN_CATEGORY, category)
+       // cv.put(COLUMN_CATEGORY, category)
         val result = db.insert(TABLE_NAME, null, cv)
         if (result == -1L) {
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
@@ -132,7 +131,7 @@ class MyDatabaseHelper(private val context: Context?) :
         cv.put(COLUMN_TITLE, title)
         cv.put(COLUMN_PHONENUMBER, phonenumber)
         cv.put(COLUMN_COUNTRY, country)
-        cv.put(COLUMN_CATEGORY, category)
+       // cv.put(COLUMN_CATEGORY, category)
         val result = db.update(
             TABLE_NAME,
             cv,
@@ -177,7 +176,6 @@ class MyDatabaseHelper(private val context: Context?) :
         dateofbirth: String,
         contrydl: String?,
         notedll: String?,
-        categorypc_ec: String?,
         placeofissue: String?
     ) {
 
@@ -186,7 +184,7 @@ class MyDatabaseHelper(private val context: Context?) :
         cv.put(COLUMN_TITLEIDS, titledl )
         cv.put(COLUMN_FULLNAMEIDS, fullnamdl)
         cv.put(COLUMN_NUMBERIDS, number)
-        cv.put(COLUMN_CATEGORYIDS, categorypc_ec)
+      //  cv.put(COLUMN_CATEGORYIDS, categorypc_ec)
         cv.put(COLUMN_ISSUEDATEIDS, issuedate)
         cv.put(COLUMN_EXPIRATONDATEIDS, expiratondate)
         cv.put(COLUMN_DATEOFBIRTHIDS, dateofbirth)
@@ -225,7 +223,7 @@ class MyDatabaseHelper(private val context: Context?) :
         dateofbirth: Int,
         contrydl: String?,
         notedll: String?,
-        categorypc_ec: String?,
+      //  categorypc_ec: String?,
         placeofissue: String?
 
     ) {
@@ -240,7 +238,7 @@ class MyDatabaseHelper(private val context: Context?) :
         cv.put(COLUMN_DATEOFBIRTHIDS, dateofbirth)
         cv.put(COLUMN_COUNTRYIDS, contrydl)
         cv.put(COLUMN_NOTEIDS, notedll)
-        cv.put(COLUMN_CATEGORYIDS, categorypc_ec)
+     //   cv.put(COLUMN_CATEGORYIDS, categorypc_ec)
         cv.put(COLUMN_PLACEOFISSUEIDS, placeofissue)
         val result = db.update(
             TABLE_IDPROOF,
@@ -280,7 +278,7 @@ class MyDatabaseHelper(private val context: Context?) :
         titlesms: String?,
         emaiusername_devicename: String?,
         password: String?,
-        categorysms: String?,
+      //  categorysms: String?,
         notesms: String?
     ) {
         val db = this.writableDatabase
@@ -288,7 +286,7 @@ class MyDatabaseHelper(private val context: Context?) :
         cv.put(COLUMN_TITLPASSWORD, titlesms)
         cv.put(COLUMN_EMAILUSERNAMEPASSWORD, emaiusername_devicename)
         cv.put(COLUMN_PASSWORDPASSWORD, password)
-        cv.put(COLUMN_CATEGORYPASSWORD, categorysms)
+   //     cv.put(COLUMN_CATEGORYPASSWORD, categorysms)
         cv.put(COLUMN_NOTESPASSWORD, notesms)
         val result =
             db.insert(TABLE_SOCIALMEDIASITES, null, cv)
@@ -315,7 +313,7 @@ class MyDatabaseHelper(private val context: Context?) :
         titlesms: String?,
         emaiusername_devicename: String?,
         password: String?,
-        categorysms: String?,
+    //    categorysms: String?,
         notesms: String?
     ) {
         val db = this.writableDatabase
@@ -323,7 +321,7 @@ class MyDatabaseHelper(private val context: Context?) :
         cv.put(COLUMN_TITLPASSWORD, titlesms)
         cv.put(COLUMN_EMAILUSERNAMEPASSWORD, emaiusername_devicename)
         cv.put(COLUMN_PASSWORDPASSWORD, password)
-        cv.put(COLUMN_CATEGORYPASSWORD, categorysms)
+     //   cv.put(COLUMN_CATEGORYPASSWORD, categorysms)
         cv.put(COLUMN_NOTESPASSWORD, notesms)
         val result = db.update(
             TABLE_SOCIALMEDIASITES,
@@ -375,7 +373,7 @@ class MyDatabaseHelper(private val context: Context?) :
         private const val COLUMN_TITLE = "title"
         private const val COLUMN_PHONENUMBER = "phonenumber"
         private const val COLUMN_COUNTRY = "country"
-        private const val COLUMN_CATEGORY = "categoty"
+       // private const val COLUMN_CATEGORY = "categoty"
         private const val COLUMN_NOTE = "note"
        //ID'S
         //DRIVING LICENSE
@@ -390,7 +388,7 @@ class MyDatabaseHelper(private val context: Context?) :
        // private const val COLUMN_DATEOFBIRTH = "SecPass_dateofbirth"
         private const val COLUMN_COUNTRYIDS = "country"
         private const val COLUMN_NOTEIDS = "note"
-        private const val COLUMN_CATEGORYIDS = "category"
+     //   private const val COLUMN_CATEGORYIDS = "category"
         private const val COLUMN_PLACEOFISSUEIDS = "placeofissue"
         private const val COLUMN_GENDERIDS = "gender"
 
@@ -401,7 +399,7 @@ class MyDatabaseHelper(private val context: Context?) :
         private const val COLUMN_TITLPASSWORD = "title"
         private const val COLUMN_EMAILUSERNAMEPASSWORD = "emailusername"
         private const val COLUMN_PASSWORDPASSWORD = "password"
-        private const val COLUMN_CATEGORYPASSWORD = "category"
+    //    private const val COLUMN_CATEGORYPASSWORD = "category"
         private const val COLUMN_NOTESPASSWORD = "notes"
 
     }

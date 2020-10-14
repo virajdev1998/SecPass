@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+    android:id="@+id/drawerLayout"
     tools:context=".ui.DashBoardActivity">
 
     <RelativeLayout
@@ -22,18 +23,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary">
-
+                <ImageView
+                    android:layout_marginTop="16dp"
+                    android:id="@+id/navbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:src="@drawable/ic_navbuttonwhite"/>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userprofile"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_marginEnd="13.5dp"
                         android:layout_gravity="right"
                         android:layout_marginTop="10dp"
                         android:layout_marginHorizontal="20dp"
                         android:src="@drawable/userlogo"/>
+                  <!--  <ImageView
+                        android:layout_marginEnd="11.5dp"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="right"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/userlogo" />-->
 
                 </FrameLayout>
 
@@ -62,6 +78,7 @@
 
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,171 +90,186 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerView"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"/>
+                        android:orientation="vertical">
 
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
 
-                </LinearLayout>
-            </androidx.core.widget.NestedScrollView>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewids"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewesms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
                 <com.github.clans.fab.FloatingActionMenu
                     android:id="@+id/floatingmenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:menu_fab_size="normal"
                     android:layout_gravity="bottom|end"
-                    android:layout_marginHorizontal="20dp"
-                    android:layout_marginVertical="20dp"
-                    android:src="@drawable/ic_add"
-
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_add_black_24dp"
                     app:menu_colorNormal="@color/colorAccent"
-                    android:layout_marginEnd="10dp">
+                    app:menu_colorPressed="@color/colorPrimaryDark"
+                    app:menu_fab_size="normal">
+
                     <com.github.clans.fab.FloatingActionButton
                         android:id="@+id/personalinfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
-                        app:fab_size="normal"
                         android:src="@drawable/ic_personal_info"
-                        app:fab_label="Personal Info"/>
-                    <com.github.clans.fab.FloatingActionButton
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Personal Info"
+                        app:fab_size="normal" />
+
+                   <!-- <com.github.clans.fab.FloatingActionButton
                         android:id="@+id/cards"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
-                        app:fab_size="normal"
                         android:src="@drawable/ic_credit_card"
-                        app:fab_label="Credi/Debit Cards"/>
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Credi/Debit Cards"
+                        app:fab_size="normal" />-->
+
                     <com.github.clans.fab.FloatingActionButton
                         android:id="@+id/password"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_password"
-                        app:fab_size="normal"
-                        app:fab_label="Passwords"/>
-
-
-
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Passwords"
+                        app:fab_size="normal" />
 
                     <com.github.clans.fab.FloatingActionButton
                         android:id="@+id/ids"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_id_proof_line"
-                        app:fab_label="ID's"/>
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="ID's" />
+
                     <com.github.clans.fab.FloatingActionButton
                         android:id="@+id/election_card"
-                        android:visibility="gone"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_pan_card"
-                        app:fab_label="Election Card"/>
-                    <com.github.clans.fab.FloatingActionButton
                         android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Election Card" />
+
+                    <com.github.clans.fab.FloatingActionButton
                         android:id="@+id/passport"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_passport"
-                        app:fab_label="Passport"/>
-                    <com.github.clans.fab.FloatingActionButton
                         android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Passport" />
+
+                    <com.github.clans.fab.FloatingActionButton
                         android:id="@+id/pan_card"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_pan_card"
-                        app:fab_label="Pan Card"/>
+                        android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Pan Card" />
 
                     <com.github.clans.fab.FloatingActionButton
-                        android:visibility="gone"
                         android:id="@+id/driving_license"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_pan_card"
-                        app:fab_label="Driving License"/>
+                        android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Driving License" />
 
                     <com.github.clans.fab.FloatingActionButton
-                        android:visibility="gone"
                         android:id="@+id/wifi"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_wifi_line"
-                        app:fab_label="WiFi"/>
+                        android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="WiFi" />
 
                     <com.github.clans.fab.FloatingActionButton
-                        android:visibility="gone"
                         android:id="@+id/ecommerce"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_cart_line"
-                        app:fab_label="E-Commerce Website"/>
+                        android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="E-Commerce Website" />
 
                     <com.github.clans.fab.FloatingActionButton
-                        android:visibility="gone"
                         android:id="@+id/socialmedia"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_envelope_line"
-                        app:fab_label="Social-Media Sites"/>
+                        android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Social-Media Sites" />
 
                     <com.github.clans.fab.FloatingActionButton
-                        android:visibility="gone"
                         android:id="@+id/address"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_location_on_black_24dp"
-                        app:fab_label="Address"/>
+                        android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Address" />
 
                     <com.github.clans.fab.FloatingActionButton
-                        android:visibility="gone"
                         android:id="@+id/phonenumber"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_phone_android_black_24dp"
-                        app:fab_label="Phone Number"/>
+                        android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Phone Number" />
 
                     <com.github.clans.fab.FloatingActionButton
-                        android:visibility="gone"
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
-                        app:fab_colorNormal="@color/colorAccent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_icon_profile"
-                        app:fab_label="Name"/>
+                        android:visibility="gone"
+                        app:fab_colorNormal="@color/colorAccent"
+                        app:fab_label="Name" />
                 </com.github.clans.fab.FloatingActionMenu>
-                            </FrameLayout>
+            </FrameLayout>
 
         </LinearLayout>
 
-
-
-
     </RelativeLayout>
+
     <com.google.android.material.navigation.NavigationView
-        android:layout_width="match_parent"
+        android:layout_width="323dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/nav_menu"
+        android:background="@color/colorPrimary"
         android:fitsSystemWindows="true"
-        android:background="@color/colorPrimary" />
+        android:id="@+id/navigationview"
+        app:menu="@menu/nav_menu" />
 </androidx.drawerlayout.widget.DrawerLayout>

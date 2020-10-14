@@ -2,6 +2,7 @@ package com.example.secpass.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -16,23 +17,23 @@ import com.example.secpass.helper.MyDatabaseHelper;
 
 import java.util.Objects;
 
-public class AddPhoneNumberActivity extends AppCompatActivity implements View.OnClickListener {
+public class AddPhoneNumberActivity extends AppCompatActivity {
 
     AutoCompleteTextView txtCategory;
     ImageView imgphonenumber;
     Button btnSavephonenumber;
-    EditText edt_mobileno, edt_Notes, txtCountry;
-    TextView edt_texttitle;
+    EditText etmobilenumberpn, etnotepn, etcountrypn, txtCountry;
+    TextView etTitlepn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_phone_number);
 
-        edt_texttitle = findViewById(R.id.etTitlepn);
-        edt_mobileno = findViewById(R.id.etmobilenumberpn);
-        edt_Notes = findViewById(R.id.etnotepn);
-        txtCountry = findViewById(R.id.etcountrypn);
+        etTitlepn = findViewById(R.id.etTitlepn);
+        etmobilenumberpn = findViewById(R.id.etmobilenumberpn);
+        etcountrypn = findViewById(R.id.etcountrypn);
+        etnotepn = findViewById(R.id.etnotepn);
         imgphonenumber = findViewById(R.id.imgClosepn);
         btnSavephonenumber = findViewById(R.id.btnSavepn);
 
@@ -72,20 +73,60 @@ public class AddPhoneNumberActivity extends AppCompatActivity implements View.On
         btnSavephonenumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(AddPhoneNumberActivity.this);
-                myDB.addName("", "", "0", "",
-                        Objects.requireNonNull(edt_texttitle.getText()).toString(),
-                        Objects.requireNonNull(edt_mobileno.getText()).toString(),
-                        txtCategory.getText().toString(), txtCountry.getText().toString(),
-                        Objects.requireNonNull(edt_Notes.getText()).toString());
+
+                String mobile = etmobilenumberpn.getText().toString().trim();
+                if (mobile.isEmpty() || mobile.length() < 10) {
+                    etmobilenumberpn.setError("Please Enter a valid Contact Number");
+                    etmobilenumberpn.requestFocus();
+                    return;
+
+                } else if (etcountrypn.getText().toString().equals("")) {
+                    etcountrypn.setError("Please Enter Country");
+                    etcountrypn.requestFocus();
+                    return;
+                }
+
+                else if (etnotepn.getText().toString().equals("")) {
+                    etnotepn.setError("Please Enter Notes");
+                    etnotepn.requestFocus();
+                    return;
+                }
+
+                if (!etmobilenumberpn.getText().toString().equals("")
+                        && !etcountrypn.getText().toString().equals("")
+                        && !etnotepn.getText().toString().equals("")
+                ) {
+
+                    MyDatabaseHelper myDB = new MyDatabaseHelper(AddPhoneNumberActivity.this);
+                    myDB.addName(
+
+
+                            etTitlepn.getText().toString(),
+                            "",
+                            "",
+                            "",
+                            "",
+                            etmobilenumberpn.getText().toString(),
+                            etcountrypn.getText().toString(),
+                            Objects.requireNonNull(etnotepn.getText()).toString()
+
+                    );
+
+                    Intent i = new Intent(AddPhoneNumberActivity.this, DashBoardActivity.class);
+                    startActivity(i);
+                }
 
             }
         });
-
     }
 
     @Override
-    public void onClick(View v) {
-        onBackPressed();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -60,7 +60,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="24dp"
         android:background="@drawable/layout_bg">
@@ -85,13 +85,14 @@
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/etTitlees"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/write_here_title"
                     android:fontFamily="@font/gilroysemi"
-                    android:textSize="14sp"
+                    android:text="@string/ecommerce_sites"
+                    android:textSize="18sp"
                     android:padding="16dp"
                     android:inputType="text"
                     android:textColor="@color/colorTitleText"
@@ -152,28 +153,28 @@
                     android:background="@drawable/edit_text_border"
                     android:textColorHint="@color/border" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="25dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="3dp"
-                    android:fontFamily="@font/gilroy"
-                    android:text="@string/category"
-                    android:textColor="@color/colorTitleText"
-                    android:textSize="16sp"/>
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="25dp"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    android:layout_marginBottom="3dp"-->
+<!--                    android:fontFamily="@font/gilroy"-->
+<!--                    android:text="@string/category"-->
+<!--                    android:textColor="@color/colorTitleText"-->
+<!--                    android:textSize="16sp"/>-->
 
-                <Spinner
-                    android:id="@+id/spnCategoryes"
-                    android:textSize="14sp"
-                    android:entries="@array/categories"
-                    android:padding="15dp"
-                    android:background="@drawable/spinner_background"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/border"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+<!--                <Spinner-->
+<!--                    android:id="@+id/spnCategoryes"-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:entries="@array/categories"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:background="@drawable/spinner_background"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:textColor="@color/border"-->
+<!--                    android:layout_marginHorizontal="16dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
 
                 <TextView
                     android:layout_width="match_parent"

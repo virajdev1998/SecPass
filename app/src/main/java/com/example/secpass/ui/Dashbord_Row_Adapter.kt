@@ -35,7 +35,7 @@ class Dashbord_Row_Adapterinternal constructor(private val activity: Activity, p
     // holder.book_id_txt.text = SecPass_id[position].toString()
     //    holder.book_title_txt.text = SecPass_titlesms[position].toString()
         if(SecPass_emailusername!=null) {
-            holder.Emailsms.text = SecPass_fullname[position].toString()
+       //     holder.Emailsms.text = SecPass_fullname[position].toString()
         }
         else{
 
@@ -63,7 +63,7 @@ class Dashbord_Row_Adapterinternal constructor(private val activity: Activity, p
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     //   var book_id_txt: TextView
-        var Emailsms: TextView
+     //   var Emailsms: TextView
     //  var book_author_txt: TextView
     //   var book_pages_txt: TextView
     //    var book_gender_txt: TextView
@@ -72,7 +72,7 @@ class Dashbord_Row_Adapterinternal constructor(private val activity: Activity, p
 
         init {
            // book_id_txt = itemView.findViewById(R.id.book_id_txt)
-            Emailsms = itemView.findViewById(R.id.Email)
+        //    Emailsms = itemView.findViewById(R.id.Email)
          //   book_author_txt = itemView.findViewById(R.id.book_author_txt)
      //       book_pages_txt = itemView.findViewById(R.id.book_pages_txt)
      //       book_gender_txt = itemView.findViewById(R.id.book_gender_txt)

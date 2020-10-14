@@ -23,7 +23,7 @@
             android:padding="12dp">
 
             <ImageView
-                android:id="@+id/book_id_txt"
+                android:id="@+id/id_sms"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="1"
@@ -37,7 +37,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/book_title_txt"
+                android:id="@+id/titalsms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -46,17 +46,17 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#000"
-                app:layout_constraintStart_toEndOf="@+id/book_id_txt"
-                app:layout_constraintTop_toTopOf="@+id/book_id_txt" />
+                app:layout_constraintStart_toEndOf="@+id/id_sms"
+                app:layout_constraintTop_toTopOf="@+id/id_sms" />
 
             <TextView
                 android:textColor="@color/colorBlue"
-                android:id="@+id/mail"
+                android:id="@+id/emailsms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Email"
-                app:layout_constraintStart_toStartOf="@+id/book_title_txt"
-                app:layout_constraintTop_toBottomOf="@+id/book_title_txt" />
+                app:layout_constraintStart_toStartOf="@+id/titalsms"
+                app:layout_constraintTop_toBottomOf="@+id/titalsms" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

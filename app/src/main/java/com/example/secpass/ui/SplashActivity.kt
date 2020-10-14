@@ -23,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun moveToNextScreen() {
-        startActivity(Intent(this, LoginActivity::class.java))
+        startActivity(Intent(this, slider::class.java))
         finish()
     }
 }

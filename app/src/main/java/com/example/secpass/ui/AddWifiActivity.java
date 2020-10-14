@@ -25,12 +25,13 @@ import com.example.secpass.helper.MyDatabaseHelper;
 public class AddWifiActivity extends AppCompatActivity {
 
     CardView crdwifi;
-    EditText etTitlewifi, etDeviceNamewifi, etPasswordwifi, etNotewifi;
+    EditText  etDeviceNamewifi, etPasswordwifi, etNotewifi;
     Spinner spnCategorywifi;
     Context ctx = this;
     ArrayAdapter<String> adapter;
     ImageView imgClosewifi, imageAccount;
     Button btnSavewifi;
+    TextView etTitlewifi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +42,10 @@ public class AddWifiActivity extends AppCompatActivity {
         etDeviceNamewifi = findViewById(R.id.etDeviceNamewifi);
         etPasswordwifi = findViewById(R.id.etPasswordwifi);
         etNotewifi = findViewById(R.id.etNotewifi);
-        spnCategorywifi = findViewById(R.id.spnCategorywifi);
+      //  spnCategorywifi = findViewById(R.id.spnCategorywifi);
 
         initView();
-        spinnerItem();
+//        spinnerItem();
     }
 
     private void initView() {
@@ -67,14 +68,38 @@ public class AddWifiActivity extends AppCompatActivity {
         btnSavewifi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(AddWifiActivity.this);
-                myDB.addsocialmediasites(etTitlewifi.getText().toString().trim(),
-                        etDeviceNamewifi.getText().toString().trim(),
-                        etPasswordwifi.getText().toString().trim(),
-                        "",
-                        etNotewifi.getText().toString().trim()
-                );
+                if (etDeviceNamewifi.getText().toString().equals("")) {
+                    etDeviceNamewifi.setError("Please Enter Device Name");
+                    etDeviceNamewifi.requestFocus();
+                    return;
+                }
 
+                else if (etPasswordwifi.getText().toString().equals("")) {
+                    etPasswordwifi.setError("Please Enter Password");
+                    etPasswordwifi.requestFocus();
+                    return;
+                }
+                else if (etNotewifi.getText().toString().equals("")){
+                etNotewifi.setError("Please Enter Notes");
+                    etNotewifi.requestFocus();
+                    return;
+                }
+
+
+                if (!etDeviceNamewifi.getText().toString().equals("")
+                        && !etPasswordwifi.getText().toString().equals("")
+                        && !etNotewifi.getText().toString().equals("")
+                ) {
+
+                    MyDatabaseHelper myDB = new MyDatabaseHelper(AddWifiActivity.this);
+                    myDB.addsocialmediasites(etTitlewifi.getText().toString().trim(),
+                            etDeviceNamewifi.getText().toString().trim(),
+                            etPasswordwifi.getText().toString().trim(),
+                            etNotewifi.getText().toString().trim()
+                    );
+                    Intent i = new Intent(AddWifiActivity.this, DashBoardActivity.class);
+                    startActivity(i);
+                }
             }
         });
     }
@@ -110,7 +135,7 @@ public class AddWifiActivity extends AppCompatActivity {
         adapter.add("Personal Info");
         adapter.add("choose category"); //This is the text that will be displayed as hint.
 
-        spnCategorywifi.setAdapter(adapter);
+//        spnCategorywifi.setAdapter(adapter);
         spnCategorywifi.setSelection(adapter.getCount()); //set the hint the default selection so it appears on launch.
         //spncategory.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
     }

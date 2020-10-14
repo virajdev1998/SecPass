@@ -2,7 +2,10 @@ package com.example.secpass.Adapter
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.secpass.R
@@ -23,12 +26,24 @@ class Social_Media_Adapter constructor(var ctx: Context, var socialMedia: ArrayL
 
     override fun onBindViewHolder(holder: viewholder, position: Int) {
         var pojo: Social_Media = socialMedia.get(position)
-        holder.txt_email.setText(pojo.emal_username)
-        holder.txt_book.setText(pojo.title)
+        holder.emailsms.setText(pojo.emal_username)
+        holder.titalsms.setText(pojo.title)
         Glide
             .with(ctx)
             .load(pojo.title)
             .placeholder(R.drawable.instagram)
-            .into(holder.img_logo)
+            .into(holder.id_sms)
     }
+}
+class viewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    var id_sms: ImageView
+    var titalsms: TextView
+    var emailsms: TextView
+
+    init {
+        id_sms = itemView.findViewById(R.id.id_sms)
+        titalsms = itemView.findViewById(R.id.titalsms)
+        emailsms = itemView.findViewById(R.id.emailsms)
+    }
+
 }

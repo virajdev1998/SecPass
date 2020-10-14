@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.Add_PanCard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgClosepc"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="32dp"
+                android:src="@drawable/ic_close"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgAccount"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="32dp"
+                android:src="@drawable/nopath"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtwifi"
+        android:text="@string/pancard"
+        android:fontFamily="@font/gilroysemi"
+        android:textColor="@color/colorWhite"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/layout_bg">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/gilroy"
+                    android:text="@string/title"
+                    android:textColor="@color/colorTitleText"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/etTitlepc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gilroysemi"
+                    android:text="Pan Card"
+                    android:padding="16dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorTitleText"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/edit_text_border"
+                    android:textColorHint="@color/border" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/gilroy"
+                    android:text="@string/full_name"
+                    android:textColor="@color/colorTitleText"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/etNamepc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/write_here_fullname"
+                    android:fontFamily="@font/gilroysemi"
+                    android:textSize="14sp"
+                    android:padding="16dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorTitleText"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/edit_text_border"
+                    android:textColorHint="@color/border" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/gilroy"
+                    android:text="@string/pan_number"
+                    android:textColor="@color/colorTitleText"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/etPanNumberpc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/write_here_pan_number"
+                    android:fontFamily="@font/gilroysemi"
+                    android:textSize="14sp"
+                    android:padding="16dp"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorTitleText"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:background="@drawable/edit_text_border"
+                    android:textColorHint="@color/border" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/gilroy"
+                    android:text="@string/notes"
+                    android:textColor="@color/colorTitleText"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_border"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/etNotepc"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:hint="@string/write_here_note"
+                        android:textColorHint="@color/border"
+                        android:layout_marginVertical="10dp"
+                        android:paddingHorizontal="20dp"
+                        android:textSize="18sp"
+                        android:background="@null"
+                        android:textColor="@color/colorTitleText"
+                        android:gravity="top"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSavepc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:padding="16dp"
+                    android:backgroundTint="@color/colorButton"
+                    android:shadowColor="@color/colorBlack"
+                    android:text="@string/save"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

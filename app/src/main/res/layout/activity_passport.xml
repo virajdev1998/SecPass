@@ -22,7 +22,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/imgClose"
+                android:id="@+id/imgClosepp"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="32dp"
@@ -86,14 +86,15 @@
                     android:textColor="@color/colorTitleText"
                     android:textSize="16sp"/>
 
-                <EditText
-                    android:id="@+id/etTitle"
+                <TextView
+                    android:id="@+id/etTitlepp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/write_here_title"
                     android:fontFamily="@font/gilroysemi"
-                    android:textSize="14sp"
+                    android:textSize="18sp"
                     android:padding="16dp"
+                    android:text="@string/passport"
                     android:inputType="text"
                     android:textColor="@color/colorTitleText"
                     android:layout_marginTop="12dp"
@@ -113,7 +114,7 @@
                     android:textSize="16sp"/>
 
                 <EditText
-                    android:id="@+id/etFullName"
+                    android:id="@+id/etFullNamepp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/write_here_fullname"
@@ -139,14 +140,15 @@
                     android:textSize="16sp"/>
 
                 <EditText
-                    android:id="@+id/etNumber"
+                    android:id="@+id/etNumberpp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/write_here_number"
                     android:fontFamily="@font/gilroysemi"
                     android:textSize="14sp"
                     android:padding="16dp"
-                    android:inputType="text"
+                    android:inputType="number"
+                    android:maxLength="10"
                     android:textColor="@color/colorTitleText"
                     android:layout_marginTop="12dp"
                     android:layout_marginHorizontal="16dp"
@@ -175,8 +177,8 @@
                             android:textColor="@color/colorTitleText"
                             android:textSize="16sp"/>
 
-                        <EditText
-                            android:id="@+id/etIssueDate"
+                        <TextView
+                            android:id="@+id/etIssueDatepp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/mm_dd_yy"
@@ -210,8 +212,8 @@
                             android:textColor="@color/colorTitleText"
                             android:textSize="16sp"/>
 
-                        <EditText
-                            android:id="@+id/etExpirationDate"
+                        <TextView
+                            android:id="@+id/etExpirationDatepp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/mm_dd_yy"
@@ -242,10 +244,10 @@
                     android:textSize="16sp"/>
 
                 <EditText
-                    android:id="@+id/etPlaceOfIssue"
+                    android:id="@+id/etPlaceOfIssuepp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/write_here_fullname"
+                    android:hint="@string/write_Place_of_issue"
                     android:fontFamily="@font/gilroysemi"
                     android:textSize="14sp"
                     android:padding="16dp"
@@ -279,7 +281,7 @@
                             android:textSize="16sp"/>
 
                         <EditText
-                            android:id="@+id/etGender"
+                            android:id="@+id/etGenderpp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/select"
@@ -287,7 +289,7 @@
                             android:textSize="14sp"
                             android:gravity="center"
                             android:padding="16dp"
-                            android:inputType="date"
+                            android:inputType="textPersonName"
                             android:textColor="@color/colorTitleText"
                             android:layout_marginTop="12dp"
                             android:layout_marginHorizontal="16dp"
@@ -313,8 +315,8 @@
                             android:textColor="@color/colorTitleText"
                             android:textSize="16sp"/>
 
-                        <EditText
-                            android:id="@+id/etDateofBirth"
+                        <TextView
+                            android:id="@+id/etDateofBirthpp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/mm_dd_yy"
@@ -345,14 +347,14 @@
                     android:textSize="16sp"/>
 
                 <EditText
-                    android:id="@+id/etCountry"
+                    android:id="@+id/etCountrypp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/write_here_number"
+                    android:hint="@string/write_here_country"
                     android:fontFamily="@font/gilroysemi"
                     android:textSize="14sp"
                     android:padding="16dp"
-                    android:inputType="textPassword"
+                    android:inputType="textPersonName"
                     android:textColor="@color/colorTitleText"
                     android:layout_marginTop="12dp"
                     android:layout_marginHorizontal="16dp"
@@ -379,7 +381,7 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/etNote"
+                        android:id="@+id/etNotepp"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:hint="@string/write_here_note"
@@ -387,6 +389,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="12dp"
                         android:textSize="18sp"
+                        android:textColor="@color/colorTitleText"
                         android:background="@null"
                         android:gravity="top"
                         android:textStyle="normal"/>
@@ -394,7 +397,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/btnSave"
+                    android:id="@+id/btnSavepp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"

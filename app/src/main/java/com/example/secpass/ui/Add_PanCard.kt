@@ -30,7 +30,7 @@ class Add_PanCard : AppCompatActivity(), View.OnClickListener {
                 db.addidproof(
                     etTitlepc.text.toString(), etNamepc.text.toString(),
                     etPanNumberpc.text.toString(), "", "",
-                    "", "", "", etNotepc.text.toString(), etTitle.text.toString(), ""
+                    "", "", "", etNotepc.text.toString(), ""
                 )
                 startActivity(Intent(this, DashBoardActivity::class.java))
             }

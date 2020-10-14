@@ -16,7 +16,7 @@ class Personal_info_Adapter constructor(var ctx: Context, var Ids: ArrayList<Per
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Viewhoder {
         val inflater = LayoutInflater.from(ctx)
-        val view = inflater.inflate(R.layout.activity_dashbordecs__row__adapter, parent, false)
+        val view = inflater.inflate(R.layout.activity_dashbord__row, parent, false)
         return Viewhoder(view)
     }
 
@@ -26,26 +26,34 @@ class Personal_info_Adapter constructor(var ctx: Context, var Ids: ArrayList<Per
 
     override fun onBindViewHolder(holder: Viewhoder, position: Int) {
         var pojo: Personal_Info = Ids.get(position)
-        holder.txt_email.setText(pojo.fullname)
-        holder.txt_book.setText(pojo.title)
+
+        if (pojo.phonenumber==""){
+            holder.Email_pi.setText(pojo.nickname)
+        }
+        else
+        {
+            holder.Email_pi.setText(pojo.phonenumber)
+        }
+
+        holder.tital_pi.setText(pojo.title)
         Glide
             .with(ctx)
             .load(pojo.title)
             .placeholder(R.drawable.instagram)
-            .into(holder.img_logo)
+            .into(holder.id_pi)
     }
 
 }
 
 class Viewhoder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    var img_logo: ImageView
-    var txt_book: TextView
-    var txt_email: TextView
+    var id_pi: ImageView
+    var tital_pi: TextView
+    var Email_pi: TextView
 
     init {
-        img_logo = itemView.findViewById(R.id.book_id_txt)
-        txt_book = itemView.findViewById(R.id.book_title_txt)
-        txt_email = itemView.findViewById(R.id.mail)
+        id_pi = itemView.findViewById(R.id.id_pi)
+        tital_pi = itemView.findViewById(R.id.tital_pi)
+        Email_pi = itemView.findViewById(R.id.Email_pi)
     }
 
 }

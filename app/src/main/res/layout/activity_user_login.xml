@@ -68,7 +68,8 @@
                     android:src="@drawable/ic_email_icon"/>
 
                 <EditText
-                    android:id="@+id/etEmail"
+                    android:text="virajbaraiya1998@gmail.com"
+                    android:id="@+id/etEmaillogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorWhite"
@@ -117,7 +118,9 @@
                     android:src="@drawable/ic_master_password_icon"/>
 
                 <EditText
-                    android:id="@+id/etPassword"
+                    android:inputType="textPassword"
+                    android:text="viraj12345"
+                    android:id="@+id/etPasswordlogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorWhite"

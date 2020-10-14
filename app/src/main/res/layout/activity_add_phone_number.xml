@@ -59,7 +59,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="24dp"
         android:background="@drawable/layout_bg"
         android:orientation="vertical">
@@ -118,8 +118,9 @@
                     android:background="@drawable/edit_text_border"
                     android:fontFamily="@font/gilroysemi"
                     android:hint="Write Phone Number Here"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:padding="16dp"
+                    android:maxLength="10"
                     android:textColor="@color/colorTitleText"
                     android:textColorHint="@color/border"
                     android:textSize="14sp" />
@@ -144,7 +145,7 @@
                     android:background="@drawable/edit_text_border"
                     android:fontFamily="@font/gilroysemi"
                     android:hint="Write Country Here"
-                    android:inputType="number"
+                    android:inputType="textPersonName"
                     android:padding="16dp"
                     android:textColor="@color/colorTitleText"
                     android:textColorHint="@color/border"

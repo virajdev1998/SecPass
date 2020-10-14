@@ -5,5 +5,6 @@ data class Personal_Info(
     var dob: String, var gender: String,
     //phonenumber
     var title: String, var phonenumber: String, var country: String,
-    var category: String, var note: String
+    //var category: String,
+    var note: String
 )

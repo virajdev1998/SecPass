@@ -2,15 +2,30 @@
     <string name="app_name">SecPass</string>
     <string name="create_an_account">Create an account</string>
     <string name="log_in">Log In</string>
+    <string name="sign_in">Sign In</string>
     <string name="Signup">Signup</string>
+    <string name="copytoclipbord">Copy to Clipboard</string>
+    <string name="RecenActivity">Recent Activity</string>
+    <string name="Edit_Profile">Edit Profile</string>
     <string name="Done">Done</string>
     <string name="Submit">Submit</string>
+    <string name="Title">Title</string>
+    <string name="Email">Email</string>
+    <string name="welcometosecpass">Welcome to SecPass</string>
+    <string name="forgotpassword">Forgot password? No worry</string>
+    <string name="trusted_and_secure">Trusted and Secure </string>
+    <string name="rewards">Rewards</string>
+    <string name="welcometosecpass_text">SecPass stores and fills your password and      \n save all your personal data at one place.</string>
+    <string name="forgotpassword_text">Remember only one master password \n      to access all your applications.</string>
+    <string name="trusted_and_secure_text">Secure your all passwords at one place, note \n even we can access your passwords.</string>
+    <string name="rewards_text"><![CDATA[Free recharge coupons & more]]></string>
+    <string name="get_started">Get Started</string>
     <string name="terms_and_conditions_privacy_policy">Terms and Conditions | Privacy Policy</string>
     <string name="enter_your_master_password_or_use_your_fingerprint">Enter Your Master Password or Use Your Fingerprint</string>
     <string name="unlock_secpass">Unlock SecPass</string>
     <string name="welcome_back">Welcome back,</string>
     <string name="SecPass">SecPass</string>
-    <string name="Reset_Password">Reset password?</string>
+    <string name="Change_Password">Change password?</string>
     <string name="Forgot_Password">Forgot password?</string>
     <string name="login_to_continue">LogIn to continue</string>
     <string name="Already_have_an_account">Already have an account?</string>
@@ -21,7 +36,7 @@
     <string name="master_password">Master Password</string>
     <string name="Reenter_Master_Password">Re-enter Master Password</string>
     <string name="enter_password">Enter Password</string>
-    <string name="confirm_password">Confirm Password</string>
+    <string name="old_password">Old Password</string>
     <string name="new_password">New Password</string>
     <string name="Type_your_email">Type your Email</string>
     <string name="search">Search</string>
@@ -29,6 +44,7 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="write_here_mobile_number">write here mobile number</string>
     <string name="country">Country</string>
+    <string name="write_here_country">write here country</string>
     <string name="choose_your_country">choose your country</string>
     <string name="category">Category</string>
     <string name="choose_category">choose category</string>
@@ -61,6 +77,7 @@
     <string name="write_here_device_name">write here device name</string>
     <string name="full_name">Full Name</string>
     <string name="write_here_fullname">write here fullname</string>
+    <string name="write_Place_of_issue">write place of issue</string>
     <string name="pan_number">PAN Number</string>
     <string name="write_here_pan_number">write here pan number</string>
     <string name="pancard">Pancard</string>
@@ -90,6 +107,7 @@
     <string name="write_here_nickname">write here nickname</string>
     <string name="social_media_sites">Social Media Sites</string>
     <string name="election_card">Election Card</string>
+    <string name="secpass_stores_and_fills_your_password_and_n_save_all_your_password_data_at_one_place">SecPass stores and fills your password and \n save all your password data at one place.</string>
     <string-array name="State">
         <item>Select</item>
         <item>Gujrat</item>
